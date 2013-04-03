@@ -4,7 +4,11 @@
 //
 // This file contains the UART routines
 
+#if defined(ARDUINO) && ARDUINO >= 100
 #include "Arduino.h"
+#else
+#include "WProgram.h"
+#endif
 #include "avr/pgmspace.h"
 #include "uart.h"
 

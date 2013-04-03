@@ -3,7 +3,7 @@
 // Copyright 2010, Paul Young
 
 // This is a simple implementation of an OTRSP SO2R Device.
-// See http://www.k1xm.org/otrsp/ for information on the
+// See http://www.k1xm.org/OTRSP for information on the
 // protocol.
 
 // This implementation does not use the Arduino libraries
@@ -13,7 +13,11 @@
 // the worst case it can keep up with the UART which is
 // run at 9600 baud.
 
+#if defined(ARDUINO) && ARDUINO >= 100
 #include "Arduino.h"
+#else
+#include "WProgram.h"
+#endif
 #include "avr/pgmspace.h"
 #include "pins.h"
 #include "eeprom.h"
