@@ -13,11 +13,7 @@
 // the worst case it can keep up with the UART which is
 // run at 9600 baud.
 
-#if defined(ARDUINO) && ARDUINO >= 100
 #include "Arduino.h"
-#else
-#include "WProgram.h"
-#endif
 #include "avr/pgmspace.h"
 #include "pins.h"
 #include "eeprom.h"

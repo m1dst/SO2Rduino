@@ -4,7 +4,6 @@
 //
 // This file contains the UART prototypes
 //
-
 #ifndef UART_H
 
 // The uart file is C, not C++ so this is needed to cause the
@@ -19,7 +18,7 @@ extern char in_buf[UBLEN];  // UART input buffer
 
 extern void uart_send_char(const char c);
 extern void uart_send_string(const char* bp);
-extern void uart_send_prog_string(const prog_char * bp);
+extern void uart_send_prog_string(const char PROGMEM * bp);
 extern void uart_init(void);
 extern void uart_clear_buffer(void);
 extern boolean do_uart(void);

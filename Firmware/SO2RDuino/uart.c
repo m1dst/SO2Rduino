@@ -4,13 +4,9 @@
 //
 // This file contains the UART routines
 
-#if defined(ARDUINO) && ARDUINO >= 100
 #include "Arduino.h"
-#else
-#include "WProgram.h"
-#endif
-#include "avr/pgmspace.h"
 #include "uart.h"
+#include "avr/pgmspace.h"
 
 char                    in_buf[UBLEN];  // UART input buffer
 static byte             in_len;         // Number of chars in buffer
@@ -49,7 +45,7 @@ uart_send_string(const char* bp)
 }
 
 void
-uart_send_prog_string(const prog_char * bp)
+uart_send_prog_string(const char PROGMEM * bp)
 //----------------------------------------------------------------------
 // Add a character string from flash to the UART output buffer
 //----------------------------------------------------------------------
