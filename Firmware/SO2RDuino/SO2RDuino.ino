@@ -559,12 +559,12 @@ do_command()
         // Return AUX2 value
         if (QCOMPARE("AUX2")) {
             uart_send_prog_string(PSTR("AUX2"));
-            if (aux1 >= 10) {
+            if (aux2 >= 10) {
                 uart_send_char('1');
-                uart_send_char((aux1-10) + '0');
+                uart_send_char((aux2-10) + '0');
             }
             else {
-                uart_send_char(aux1 + '0');
+                uart_send_char(aux2 + '0');
                 uart_send_char('\r');
              }
             return;
